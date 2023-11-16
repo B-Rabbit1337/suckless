@@ -65,15 +65,5 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ uptime,  " %s |", NULL },
-	{ kernel_release,      " %s|",  NULL },
-	{ ram_used,     "🧠 %s/",   NULL },
-	{ ram_total,    "%s |", NULL },
-	{ run_command,  " %s |",  "sensors | awk  '/Tctl/ {print $2}' " },
-	{ netspeed_rx,  "⬇️ %sB/s |",   "enp34s0" },
-	{ netspeed_tx,  "⬆️ %sB/s |",          "enp34s0" },
-	{ disk_used,	"🏢 %s/ ", "/" },
-	{ disk_total,    "%s |", "/" },
-	{ datetime, " %s |",  "%Y-%m-%d 🕛 %H:%M" },
-	{ run_command,  " %s%% |",  "volume" },
-};
+	{ datetime,             " %s",         "%a %F %T" }, /* Date time with this format: Day name YYYY-MM-DD 18:00:00 */
+	};
