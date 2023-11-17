@@ -33,6 +33,7 @@ static const char *const autostart[] = {
   "dunst", NULL,
   "conky", NULL,
   "kdeconnect-cli", NULL,
+  "blueman-applet", NULL,
   "picom", NULL,
   "feh", "--bg-fill", "/usr/share/backgrounds/archlinux/simple.png", NULL,
   "xrandr", "--output", "HDMI-0", "--primary", "mode", "2560x1080", "--rate", "60", NULL,
@@ -53,7 +54,6 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-	{ "steam",   NULL,     NULL,           1 << 8,    0,          0,           0,        -1 },
 	{ "St",      NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ "kitty",   NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
@@ -127,7 +127,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_5,                      4)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY|ControlMask|ShiftMask, XK_r,      spawn,          SHCMD("systemctl reboot")},
-	{ MODKEY|ControlMask|ShiftMask, XK_s,      spawn,          SHCMD("systemctl shutdown now")},
+	{ MODKEY|ControlMask|ShiftMask, XK_s,     spawn,           SHCMD("shutdown now")},
 };
 
 /* button definitions */
