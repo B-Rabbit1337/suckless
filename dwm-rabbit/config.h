@@ -28,7 +28,7 @@ static const char *colors[][3]      = {
 static const char *const autostart[] = {
   "xsetroot", "-cursor_name", "left_ptr", NULL,
   "flameshot", NULL,
-  "lxpolkit", NULL,
+  "xfce-polkit", NULL,
   "dunst", NULL,
   "conky", NULL,
   "blueman-applet", NULL,
