@@ -65,7 +65,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_space,  spawn,          {.v = roficmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_e,      spawn,          SHCMD ("thunar")},
-	{ MODKEY,                       XK_b,      spawn,          SHCMD ("flatpak run one.ablaze.floorp")},
+	{ MODKEY,                       XK_b,      spawn,          SHCMD ("firefox")},
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
